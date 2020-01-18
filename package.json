@@ -1,0 +1,20 @@
+{
+  "name": "react-youtube-storyboard",
+  "version": "1.0.0",
+  "description": "A storyboard created from a YouTube video",
+  "main": "server.js",
+  "scripts": {
+    "server-dev": "nodemon server.js",
+    "client-dev": "npm start --prefix client",
+    "start-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\""
+  },
+  "author": "Michael McCabe",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.2",
+    "express": "^4.17.1",
+    "express-promise-router": "^3.0.3",
+    "nodemon": "^2.0.2"
+  }
+}
