@@ -7,7 +7,7 @@ let spawn = require('child_process').spawn
 const downloadYouTubeVideo = (url) => {
   return new Promise((resolve, reject) => {
     // download the video
-    let writeStream = ytdl(url).pipe(fs.createWriteStream('client/data/video.mp4'));
+    let writeStream = ytdl(url).pipe(fs.createWriteStream('client/src/data/video.mp4'));
     writeStream.on('open', (data) => {
       console.log("Downloading video before converting to frames.")
     })
@@ -30,11 +30,11 @@ const convertVideoToFrames = () => {
     }
     // the below creates the frames
     let ffmpegVideoFrameProcess = spawn('ffmpeg', [
-      '-i', `client/data/${options.videoName}.mp4`,
+      '-i', `client/src/data/${options.videoName}.mp4`,
       '-f', 'image2',
       '-bt', '20M',
       '-vf', `fps=${options.fps}`,
-      `client/data/${options.imgFileName}%05d.jpg`
+      `client/src/data/${options.imgFileName}%05d.jpg`
     ])
 
     ffmpegVideoFrameProcess.stdout.on('data', (data) => {

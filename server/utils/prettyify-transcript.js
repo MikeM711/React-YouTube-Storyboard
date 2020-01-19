@@ -10,7 +10,7 @@ const getPrettyTranscript = () => {
             // this.end = start + duration
         }
         // ../data/captions.txt
-        var textByLine = fs.readFileSync("client/data/captions.txt").toString().split("\n");
+        var textByLine = fs.readFileSync("client/src/data/captions.txt").toString().split("\n");
         var completeTranscript = []
         var textBlob = textByLine.join('')
         var transcript = "<transcript>"

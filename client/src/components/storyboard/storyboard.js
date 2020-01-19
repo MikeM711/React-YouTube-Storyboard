@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './storyboard.css';
+import dummyData from '../../dummy-data/dummy-data';
 
 class Storyboard extends Component {
     constructor(props) {

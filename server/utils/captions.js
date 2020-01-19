@@ -18,7 +18,7 @@ async function createTranscript (id) {
                 if (track) {
                     console.log('Retrieving captions:', track.name.simpleText);
                     console.log('URL', track.baseUrl);
-                    const output = "../../client/data/captions.txt";
+                    const output = "../../client/src/data/captions.txt";
                     console.log('Saving to', output);
                     https.get(track.baseUrl, (res) => {
                         // https://github.com/request/request/issues/1645

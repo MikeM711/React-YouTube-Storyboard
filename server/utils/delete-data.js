@@ -1,4 +1,4 @@
-const directory = 'client/data';
+const directory = 'client/src/data';
 const fs = require('fs-extra')
 
 async function deleteData() {
