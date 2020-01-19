@@ -13,23 +13,29 @@ class Storyboard extends Component {
         };
     }
     
-
-
     render() {
 
+        // time and image width ill be user-defined
         const time = 5
+        const width = 800
+
         const transcript = dummyData.data
 
         const userDefinedTranscript = buildUserDefinedTranscript(transcript, time)
         console.log(userDefinedTranscript)
 
         const completeStoryboard = userDefinedTranscript.map(sequence => {
+            // Edge case: we don't have images that are all 0's
+            if (sequence.start === 0) {
+                sequence.start = 1
+            }
             return (
                 <SingleFrameSequence
                     key={sequence.id}
                     text={sequence.text}
                     start={sequence.start}
                     end={sequence.end}
+                    width={width}
                 />
             )
         })

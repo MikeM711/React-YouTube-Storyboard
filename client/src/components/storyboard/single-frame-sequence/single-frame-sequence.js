@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './single-frame-sequence.css';
+// import firstImg from '../../../data/img00001.jpg'
 
 class SingleFrameSequence extends Component {
     constructor(props) {
@@ -13,22 +14,37 @@ class SingleFrameSequence extends Component {
     
 
     render() {
-        const { text, start, end} = this.props
+        const { text, start, end, width} = this.props
 
         const pad = (num, size) => {
             var s = "0000000" + num;
             return s.substr(s.length-size);
         }
         
-        // image = image + "/img00001.jpg"
-        // let imageNum = pad(start,5)
-        // let imagePath = `../../../data/img${imageNum}.jpg`
-        // let imagePath = "../../../data/img00001.jpg"
-        // console.log(window.location.origin + '../' )
+        let imageNum = pad(start,5)
+        let path = '../../../data/img00001.jpg'
+        let imageNumber = 'img00001'
+        console.log('correct:', imageNumber)
+        console.log('incorrect:', imageNum)
+        let myImg = (
+            <div className="img">
+                <img 
+                    src={require(`../../../data/img${imageNum}.jpg`)} 
+                    alt=""
+                    width={width}
+                    >
+                </img>
+            </div>
+        )
+        
         return (
             <div className="storyboard-frame-sequence">
-                {/* <img src={window.location.origin + '/img00001.jpg'} alt=""></img> */}
-                <p>{text}, start: {start}, end: {end}</p>
+                {myImg}
+                <div className="sequence-text" style={{width:width}}>
+                    <p>start: {start}, end: {end}</p>
+                    <p>{text}</p> 
+                </div>
+                
             </div>
         );
     };
