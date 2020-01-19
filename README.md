@@ -15,6 +15,12 @@ The application does the following:
 3. Gets the caption text and caption time from the YouTube video
 4. Creates a storyboard using the caption info and the split images
 
+## How to run
+1. Clone the repo
+2. Install backend dependencies: `npm install`
+3. Install frontend dependencies: `cd client` and then `npm install`
+4. Concurrently run both backend and frontend servers: inside root directory, write `npm run start-dev`
+
 ## Future Ideas
 
 1. A Universal picture size "switch" which can:
@@ -31,3 +37,4 @@ The application does the following:
 5. Have storyboard pictures side-by-side if user browser allows it?
     * This can also be a "switch" option
 6. Show total video time and also the time at each subtitle line
+7. Show video description
