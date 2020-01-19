@@ -23,11 +23,11 @@ class Form extends Component {
     }
 
     render() {
-        console.log('5 second URLs')
-        console.log('https://www.youtube.com/watch?v=oEDFkc6k8vU')
-        console.log('https://www.youtube.com/watch?v=6e-sCFZlM1s')
-        console.log('longer videos')
-        console.log('https://www.youtube.com/watch?v=xVAbW1G64bM&list=PLQVvvaa0QuDeA05ZouE4OzDYLHY-XH-Nd&index=9')
+        // console.log('5 second URLs')
+        // console.log('https://www.youtube.com/watch?v=oEDFkc6k8vU')
+        // console.log('https://www.youtube.com/watch?v=6e-sCFZlM1s')
+        // console.log('longer videos')
+        // console.log('https://www.youtube.com/watch?v=xVAbW1G64bM&list=PLQVvvaa0QuDeA05ZouE4OzDYLHY-XH-Nd&index=9')
 
         const { progressActive } = this.props
 
